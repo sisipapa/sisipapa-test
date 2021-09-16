@@ -1,6 +1,6 @@
 package com.mathflat.sisipapa.controller;
 
-import com.mathflat.sisipapa.domain.Students;
+import com.mathflat.sisipapa.entity.Students;
 import com.mathflat.sisipapa.dto.ResponseDto;
 import com.mathflat.sisipapa.dto.StudentDto;
 import com.mathflat.sisipapa.repository.StudentsRepository;

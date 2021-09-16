@@ -1,4 +1,4 @@
-package com.mathflat.sisipapa.domain;
+package com.mathflat.sisipapa.entity;
 
 import com.mathflat.sisipapa.enumtype.SchoolType;
 import lombok.Builder;
