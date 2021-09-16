@@ -1,0 +1,11 @@
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "name" : "테스트2"
+  ,"age" : 14
+  ,"schoolType" : "MIDDLE"
+  ,"phoneNumber" : "010-0000-0002"
+}
+
+###

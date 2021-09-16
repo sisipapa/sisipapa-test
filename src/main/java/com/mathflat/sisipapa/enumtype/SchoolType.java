@@ -1,5 +1,5 @@
 package com.mathflat.sisipapa.enumtype;
 
-public enum ScoolType {
+public enum SchoolType {
     ELEMANTARY, MIDDLE, HIGH
 }
