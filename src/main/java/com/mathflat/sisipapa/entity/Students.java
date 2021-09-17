@@ -29,14 +29,15 @@ public class Students {
     @Column(nullable = false, length = 10, name = "school_type")
     private SchoolType schoolType;
 
-    @Column(nullable = false, length = 15, name = "phone_name")
+    @Column(nullable = false, length = 15, name = "phone_number", unique=true)
     private String phoneNumber;
 
     @OneToMany(mappedBy = "students")
-    private List<Scores> scores = new ArrayList<>();
+    private List<Classes> scores = new ArrayList<>();
 
     @Builder
-    public Students(String name, int age, SchoolType schoolType, String phoneNumber){
+    public Students(Long idx, String name, int age, SchoolType schoolType, String phoneNumber){
+        this.idx = idx;
         this.name = name;
         this.age = age;
         this.schoolType = schoolType;

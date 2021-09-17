@@ -2,10 +2,14 @@ POST http://localhost:8080/students
 Content-Type: application/json
 
 {
-  "name" : "테스트2"
+  "name" : "테스트3"
   ,"age" : 14
   ,"schoolType" : "MIDDLE"
-  ,"phoneNumber" : "010-0000-0002"
+  ,"phoneNumber" : "010-0000-0003"
 }
+
+###
+GET http://localhost:8080/students
+Accept: application/json
 
 ###

@@ -26,6 +26,6 @@ public class OpenApiConfig {
     @Bean
     public GroupedOpenApi postsOpenApi() {
         String[] paths = {"/students/**", "/subjects/**"};
-        return GroupedOpenApi.builder().setGroup("Posts관련 API").pathsToMatch(paths).build();
+        return GroupedOpenApi.builder().setGroup("학생 점수관리 API").pathsToMatch(paths).build();
     }
 }

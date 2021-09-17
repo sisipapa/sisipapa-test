@@ -1,18 +1,21 @@
 package com.mathflat.sisipapa.entity;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
+@NoArgsConstructor
 @Data
-@Entity(name = "scores")
-public class Scores {
+@Entity(name = "classes")
+public class Classes {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
 
-    @Column(nullable = false)
+    @Column(nullable = true)
     private int score;
 
     @ManyToOne
@@ -23,4 +26,10 @@ public class Scores {
     @JoinColumn(name = "subject_idx")
     private Subjects subjects;
 
+    @Builder
+    public Classes(int score, Students students, Subjects subjects){
+        this.score = score;
+        this.students = students;
+        this.subjects = subjects;
+    }
 }

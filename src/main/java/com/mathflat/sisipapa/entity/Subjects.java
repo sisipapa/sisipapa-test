@@ -1,11 +1,14 @@
 package com.mathflat.sisipapa.entity;
 
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@NoArgsConstructor
 @Data
 @Entity(name = "subjects")
 public class Subjects {
@@ -18,6 +21,11 @@ public class Subjects {
     private String name;
 
     @OneToMany(mappedBy = "subjects")
-    private List<Scores> scores = new ArrayList<>();
+    private List<Classes> scores = new ArrayList<>();
 
+    @Builder
+    public Subjects(Long idx, String name){
+        this.idx = idx;
+        this.name = name;
+    }
 }
